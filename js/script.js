@@ -222,6 +222,21 @@ loadMoviesText(movies);
 // // using try... catch
 // // *************************************************
 
+(async () => {
+   try {
+      const response = await fetch("data/movies.json");
+      //this is how you check the network error, not the HTTP status
+      if (!response.ok) {
+         throw new Error("Fetch failed.");
+      }
+      const movies = await response.json();
+
+   console.log("Using async-await function to fetch movies:", movies);
+   loadMovies(movies);
+   } catch (error) {
+      console.error("unexpected error", error);
+   }
+})();
 
 
 
