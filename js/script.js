@@ -1,9 +1,9 @@
-/*function loadMoviesText(movieOneStr){
+function loadMoviesText(movieOneStr){
    console.log("DEBUG: ", movieOneStr);
    movieOneStr.split("\n").forEach(movie => {
       document.querySelector("#fetch-movies-text").innerHTML += movie + "<br>" ;
    })
-}*/
+}
 
 function loadMovies(movies){
    const target = document.querySelector("#fetch-movies-json");
@@ -100,21 +100,19 @@ loadMoviesText(movies);
 });
 
 //error handling might be on the exam
-
-
-
+//fyi use select + ctrl + / (forward slash) to comment/uncomment multiple lines at once
 
 
 
 // // *************************************************
 // // 4. Rewrite the function loadMoviesText as a IIFE function
 // // *************************************************
-function loadMoviesText(movieOneStr){
+(function loadMoviesText(movieOneStr){
    console.log("DEBUG: ", movieOneStr);
    movieOneStr.split("\n").forEach(movie => {
       document.querySelector("#fetch-movies-text").innerHTML += movie + "<br>" ;
    })
-}
+})("This is a call to the IIFE function");
 
 
 
@@ -124,7 +122,13 @@ function loadMoviesText(movieOneStr){
 // // *************************************************
 // // 5. Rewrite the function loadMoviesText as a IIFE Arrow function 
 // // *************************************************
-
+// to make any function an error, take the name out and leave the parenthesis and add an arrow
+((movieOneStr)=>{
+   console.log("DEBUG: ", movieOneStr);
+   movieOneStr.split("\n").forEach(movie => {
+      document.querySelector("#fetch-movies-text").innerHTML += movie + "<br>" ;
+   })
+})("This is a call to the IIFE function #3.");
 
 
 
@@ -137,7 +141,14 @@ function loadMoviesText(movieOneStr){
 // // 6. Refactor the code that fetches movie data in a JSON format
 // // as a async-await funciton
 // // *************************************************
+// async function fetchMovies() {
+//    const response = await fetch("data/movies.json");
+//    const movies = await response.json();
 
+//    console.log("Using async-await function to fetch movies:", movies);
+//    loadMoviesJson(movies);
+// }
+// getMovies();
 
 
 
@@ -148,6 +159,14 @@ function loadMoviesText(movieOneStr){
 // // *************************************************
 // // 7. Refactor the function getMovies as an IIFE function
 // // *************************************************
+(async function fetchMovies() {
+   const response = await fetch("data/movies.json");
+   const movies = await response.json();
+
+   console.log("Using async-await function to fetch movies:", movies);
+   loadMoviesJson(movies);
+})();
+
 
 
 
@@ -158,6 +177,14 @@ function loadMoviesText(movieOneStr){
 // // *************************************************
 // // 8. Refactor the function getMovies as an IIFE arrow function
 // // *************************************************
+// do the same thing u did in 5
+(async () => {
+   const response = await fetch("data/movies.json");
+   const movies = await response.json();
+
+   console.log("Using async-await function to fetch movies:", movies);
+   loadMoviesJson(movies);
+})();
 
 
 
@@ -170,6 +197,17 @@ function loadMoviesText(movieOneStr){
 // // 9. Take the last IFEE arrow function and handle network error
 // // using try... catch
 // // *************************************************
+(async () => {
+   try {
+      const response = await fetch("data/movies.json");
+      const movies = await response.json();
+
+   console.log("Using async-await function to fetch movies:", movies);
+   loadMovies(movies);
+   } catch (error) {
+      console.error("unexpected error", error);
+   }
+})();
 
 
 
