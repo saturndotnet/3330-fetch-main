@@ -1,0 +1,201 @@
+:root {
+--dark: #0f172a;
+--text: #172033;
+--muted: #64748b;
+--border: #e2e8f0;
+--purple: #7c3aed;
+--green: #059669;
+}
+
+body {
+    margin: 0;
+    background: #f1f5f9;
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+.hero {
+    padding: 60px 0;
+    background: var(--dark);
+    color: white;
+}
+
+.hero .badge {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #334155;
+    color: #ddd6fe;
+    font-size: 12px;
+}
+
+.hero h1 {
+    margin: 0 0 10px;
+    font-size: 3rem;
+}
+
+.hero p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+}
+
+
+.data-card {
+    height: 100%;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-header-custom {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.card-header-custom .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #f1f5f9;
+}
+
+.card-header-custom h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.card-header-custom span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.movie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.movie-list p {
+    margin: 0;
+    padding: 10px 12px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+
+.actors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.actor-movie {
+    padding: 18px;
+    background: #fafafa;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.actor-movie h4 {
+    margin: 0 0 5px;
+    font-size: 1rem;
+}
+
+.actor-year {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.actor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.actor-list li {
+    padding: 6px 9px;
+    background: #f3e8ff;
+    color: #6b21a8;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.directors-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.director-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+}
+
+.director-movie {
+    font-weight: bold;
+}
+
+.director-year {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.director-name {
+    color: var(--green);
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 25px 0;
+    background: var(--dark);
+    color: #94a3b8;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+

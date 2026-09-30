@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Movie Collection</title>
+
+</head>
+<body>
+    <header class="hero">
+    <div class="container">
+        <span class="badge">FETCH API</span>
+        <h1>Movie Collection</h1>
+        <p>
+            Movies, actors and directors loaded asynchronously
+            using Fetch API.
+        </p>
+    </div>
+</header>
+
+<main class="container py-5">
+
+    <div class="section-heading">
+        <h2>Movie Data</h2>
+        <p>Different ways of loading and displaying movie information.</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Movies TXT -->
+        <div class="col-12 col-md-6">
+            <section class="data-card text-card">
+                <div class="card-header-custom">
+                    <div class="icon">📄</div>
+                    <div>
+                        <h3>Movies</h3>
+                        <span>Text file</span>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <div id="fetch-movies-text" class="movie-list"></div>
+                </div>
+            </section>
+
+        </div>
+
+
+        <!-- Movies JSON -->
+        <div class="col-12 col-md-6">
+            <section class="data-card json-card">
+                <div class="card-header-custom">
+                    <div class="icon">🎬</div>
+
+                    <div>
+                        <h3>Movies</h3>
+                        <span>JSON file</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div id="fetch-movies-json" class="movie-list"></div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- Actors -->
+        <div class="col-12">
+
+            <section class="data-card actors-card">
+                <div class="card-header-custom">
+                    <div class="icon">🎭</div>
+                    <div>
+                        <h3>Actors</h3>
+                        <span>JSON file</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div id="fetch-actors" class="actors-container">
+                        <!-- JavaScript will insert movie/actor data here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- Directors -->
+        <div class="col-12">
+            <section class="data-card directors-card">
+                <div class="card-header-custom">
+                    <div class="icon">🎥</div>
+                    <div>
+                        <h3>Directors</h3>
+                        <span>JSON file</span>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <div id="fetch-directors" class="directors-container">
+                        <!-- JavaScript will insert director data here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</main>
+
+
+<footer>
+    <div class="container">
+        <p>Movie Collection · Fetch API Practice</p>
+    </div>
+</footer>
+
+
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
